@@ -1,5 +1,6 @@
 import discord
-TOKEN = 'NTA0Njg4ODA5ODQ2NTA1NDcz.XY4Sgw.xqEsYGcnIJGjGHUtiRdkiBkTZuk'
+import random
+TOKEN = 'NTA0Njg4ODA5ODQ2NTA1NDcz.XY4pmg.-EFncjcsXRH1CGnTflTmN3x1UoY'
 client = discord.Client()
 
 
@@ -8,7 +9,8 @@ async def on_message(message):
     if message.author.bot:
         return
     if message.content == "！なこ":
-        await message.channel.send("ウホウホッ！")
+        kaiwa =["ウホウホッ！","おはなっこおおおお","なにいってんだこいつ","寝てた！！！","なこを崇めよ"]
+        choose = random.choice(kaiwa)
+        await message.channel.send(choose)
 
 client.run(TOKEN)
-
